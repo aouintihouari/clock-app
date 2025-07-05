@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="design-system.css" />
+    <link rel="stylesheet" href="app.css" />
+    <script src="scripts.js" defer></script>
+    <title>Clock App</title>
+  </head>
+  <body>
+    <main class="main text-neutral-0">
+      <section class="content-container">
+        <article class="quote-container spacing-200">
+          <blockquote class="blockquote text-preset-6">
+            <p id="quote-content">
+              "The science of operations, as derived from mathematics more
+              especially, is a science of itself, and has its own abstract truth
+              and value."
+            </p>
+            <cite id="quote-author" class="text-base font-extrabold"
+              >Ada Lovelace</cite
+            >
+          </blockquote>
+          <img class="refresh" src="assets/desktop/icon-refresh.svg" alt="" />
+        </article>
+      </section>
+      <div class="overlay main bg-neutral-950"></div>
+      <picture>
+        <source
+          srcset="assets/desktop/bg-image-daytime.jpg"
+          media="(min-width: 1024px)"
+        />
+        <source
+          srcset="assets/tablet/bg-image-daytime.jpg"
+          media="(min-width: 769px)"
+        />
+        <source
+          srcset="assets/mobile/bg-image-daytime.jpg"
+          media="(max-width: 768px)"
+        />
+        <img
+          class="cover-image"
+          src="assets/mobile/bg-image-daytime.jpg"
+          alt="background image"
+        />
+      </picture>
+      <section class="timer-container spacing-200">
+        <div>
+          <h1 class="timer-title text-preset-5">
+            <svg
+              id="timer-icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="5"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <line
+                x1="12"
+                y1="1"
+                x2="12"
+                y2="3"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <line
+                x1="12"
+                y1="21"
+                x2="12"
+                y2="23"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <line
+                x1="4.22"
+                y1="4.22"
+                x2="5.64"
+                y2="5.64"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <line
+                x1="18.36"
+                y1="18.36"
+                x2="19.78"
+                y2="19.78"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <line
+                x1="1"
+                y1="12"
+                x2="3"
+                y2="12"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <line
+                x1="21"
+                y1="12"
+                x2="23"
+                y2="12"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <line
+                x1="4.22"
+                y1="19.78"
+                x2="5.64"
+                y2="18.36"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <line
+                x1="18.36"
+                y1="5.64"
+                x2="19.78"
+                y2="4.22"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+            <span id="greeting-text">good morning</span
+            ><span class="currently">it's currently</span>
+          </h1>
+          <p class="timer-time text-preset-1">
+            <span id="current-time">11:37</span>
+            <span class="text-preset-3 font-thin" id="timezone">bst</span>
+          </p>
+          <p class="timer-location" id="location"></p>
+        </div>
+        <div class="more text-neutral-900 bg-neutral-0" id="more-button">
+          <div class="text-preset-8">
+            <span id="more-text">more</span>
+            <svg
+              class="arrow text-neutral-0 bg-neutral-900"
+              width="14"
+              height="9"
+              viewBox="0 0 14 9"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1L7 7L13 1"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Details Panel -->
+    <div class="details-panel" id="details-panel">
+      <div class="detail-item">
+        <div class="detail-label">Current Timezone</div>
+        <div class="detail-value" id="detail-timezone">Europe/London</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Day of the week</div>
+        <div class="detail-value" id="detail-day-week">5</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Day of the year</div>
+        <div class="detail-value" id="detail-day-year">295</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Week number</div>
+        <div class="detail-value" id="detail-week-number">42</div>
+      </div>
+    </div>
+  </body>
+</html>
